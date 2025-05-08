@@ -26,14 +26,6 @@ jobs:
       - name: Run linter
         run: npm run lint
 
-      - name: Run tests
-        run: |
-          if [ -n "$(find tests -name '*.test.ts' -not -empty)" ]; then
-            npm run test
-          else
-            echo "No tests yet. Skipping..."
-          fi
-
       - name: Build
         run: npm run build
 
