@@ -12,6 +12,7 @@ export default [
     },
   }),
   {
+    files: ['**/*.ts'],
     plugins: {
       '@typescript-eslint': tseslint.plugin,
       prettier: prettierPlugin,
