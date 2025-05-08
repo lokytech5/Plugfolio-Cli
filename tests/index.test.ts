@@ -1,4 +1,5 @@
-// test('placeholder', () => {
-//     expect(true).toBe(true);
-//   });
-  
+describe('Placeholder', () => {
+    test('should pass', () => {
+      expect(true).toBe(true);
+    });
+  });
