@@ -5,8 +5,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "eslint 'src/**/*.ts' --fix",
-    "format": "prettier --write 'src/**/*.ts'",
+   "lint": "eslint '**/*.ts' --fix",
+   "format": "prettier --write '**/*.ts'",
     "start": "nodemon index.ts",
     "prepare": "npm run build"
   },
