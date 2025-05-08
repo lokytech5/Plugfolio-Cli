@@ -2,12 +2,13 @@
   "name": "plugfolio-cli",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "test": "jest",
-   "lint": "eslint '**/*.ts' --fix",
-   "format": "prettier --write '**/*.ts'",
-    "start": "nodemon index.ts",
+    "lint": "eslint '**/*.ts' --fix",
+    "format": "prettier --write '**/*.ts'",
+    "start": "nodemon --exec 'ts-node-esm' index.ts",
     "prepare": "npm run build"
   },
   "keywords": [],
