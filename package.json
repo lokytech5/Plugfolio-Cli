@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "jest --passWithNoTests --config=jest.config.ts",
+    "test": "jest --passWithNoTests --config=jest.config.mjs",
     "lint": "eslint '**/*.ts' --fix",
     "format": "prettier --write '**/*.ts'",
     "start": "nodemon --exec 'ts-node-esm' index.ts",
