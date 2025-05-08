@@ -2,12 +2,15 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import prettierConfig from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
-  {
-    parserOptions: {
-      project: './tsconfig.json',
+export default [
+  ...tseslint.config({
+    languageOptions: {
+      parserOptions: {
+        project: './tsconfig.json',
+        sourceType: 'module',
+      },
     },
-  },
+  }),
   {
     plugins: {
       prettier: prettierPlugin,
@@ -24,5 +27,5 @@ export default tseslint.config(
       },
     },
   },
-  prettierConfig
-);
+  prettierConfig,
+];
