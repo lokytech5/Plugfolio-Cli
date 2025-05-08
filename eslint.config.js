@@ -1,13 +1,13 @@
-import eslintPluginPrettier from 'eslint-plugin-prettier';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import tseslint from 'typescript-eslint';
+const eslintPluginPrettier = require('eslint-plugin-prettier');
+const eslintConfigPrettier = require('eslint-config-prettier');
+const tseslint = require('typescript-eslint');
 
-export default [
-  ...tseslint.config({
+module.exports = tseslint.config(
+  {
     parserOptions: {
       project: './tsconfig.json',
     },
-  }),
+  },
   {
     plugins: {
       prettier: eslintPluginPrettier,
@@ -24,5 +24,5 @@ export default [
       },
     },
   },
-  eslintConfigPrettier,
-];
+  eslintConfigPrettier
+);
